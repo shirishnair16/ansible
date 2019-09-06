@@ -1,0 +1,42 @@
+   24  2019-09-06 14:23:21 pip install ansible
+   28  2019-09-06 14:32:42 git clone https://github.com/shirishnair16/ansible.git
+   29  2019-09-06 14:38:52 cd ansible/
+   30  2019-09-06 14:44:49 ansible --version
+   31  2019-09-06 14:45:48 touch ansible.cfg
+   32  2019-09-06 14:45:59 ansible --version
+   33  2019-09-06 14:48:23 ansible localhost -m ping 
+   35  2019-09-06 14:58:56 which ansible
+   36  2019-09-06 15:04:09 ansible localhost -m ping 
+   37  2019-09-06 15:06:35 ansible localhost-m copy -a "content='Ansible session' dest=./motd"
+   38  2019-09-06 15:08:09 ansible localhost -m copy -a "content='Ansible session' dest=./motd"
+   39  2019-09-06 15:10:26 ansible localhost -m command -a "echo 'Ansible is awesome' > ./motd"
+   40  2019-09-06 15:10:56 ansible localhost -m command -a "ps  > ./motd"
+   41  2019-09-06 15:11:16 ansible localhost -m command -a "echo 'hello'  > ./motd"
+   42  2019-09-06 15:11:34 ansible localhost -m -a "echo 'hello'  > ./motd"
+   43  2019-09-06 15:11:56 ansible -doc -l
+   44  2019-09-06 15:12:11 ansible-doc lineinfile
+   45  2019-09-06 15:15:00 ansible-doc 
+   46  2019-09-06 15:15:15 ansible-doc lineinfile
+   47  2019-09-06 15:17:51 ansible localhost -m lineinfile="ansible is awesome" path=/.motd
+   48  2019-09-06 15:18:07 ansible localhost -m lineinfile="'ansible is awesome' path=/.motd"
+   49  2019-09-06 15:18:47 ansible localhost -m lineinfile a "line='ansible is awesome' path=/.motd"
+   50  2019-09-06 15:19:32 ansible localhost -m lineinfile -a "line='ansible is awesome' path=/.motd"
+   51  2019-09-06 15:19:52 ansible localhost -m lineinfile -a "line='ansible is awesome' path=./motd"
+   52  2019-09-06 15:20:14 ansible-doc lineinfile
+   54  2019-09-06 15:23:36 ansible-doc lineinfile
+   55  2019-09-06 15:26:39 ansible localhost -m lineinfile -a "path=./motd regex='ansible is awesome' line='ansible is superawesome' "
+   56  2019-09-06 15:27:24 ansible localhost -m lineinfile -r "path=./motd regex='ansible is awesome' line='ansible is superawesome' "
+   57  2019-09-06 15:27:31 ansible localhost -m lineinfile -a "path=./motd regex='ansible is awesome' line='ansible is superawesome' "
+   59  2019-09-06 15:27:59 ansible localhost -m lineinfile -a "path=./motd regex='ansible is awesome' line='ansible is awesome' "
+   61  2019-09-06 15:32:45 ansible localhost -m lineinfile -a "path=./motd line='ansible is awesome'regex='ansible is superawesome' "
+   63  2019-09-06 15:33:30 ansible localhost -m lineinfile -a "path=./motd line='ansible is awesome'regex='superawesome' "
+   65  2019-09-06 15:33:51 ansible localhost -m lineinfile -a "path=./motd regex='ansible is awesome' line='ansible is awesome' "
+   66  2019-09-06 15:34:34 ansible localhost -m lineinfile -a "line='ansible is awesome' regex='superawsome' path=./motd"
+   68  2019-09-06 15:34:51 ansible localhost -m lineinfile -a "line='ansible is awesome' regexp='superawsome' path=./motd"
+   69  2019-09-06 15:35:39 ansible localhost -m lineinfile -a "line='ansible is awesome' regexp='annsibble' path=./motd"
+   71* 2019-09-06 15:36:58 ansible localhost -m lineinfile -a "line='ansible is awesome' regexp='ansible' path=./motd"
+   72  2019-09-06 15:38:49 ansible localhost -m lineinfile -a "line=' awesome' regexp='ansible' path=./motd"
+   74  2019-09-06 15:39:11 ansible localhost -m lineinfile -a "line='shirish' regexp='ansible' path=./motd"
+   76  2019-09-06 15:39:34 ansible localhost -m lineinfile -a "line='shirish' regexp='ansible' path=./motd"
+   78  2019-09-06 15:41:17 ansible-doc copy
+   88  2019-09-06 15:46:00 history | grep ansible > backup.txt
